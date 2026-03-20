@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnippetBox - Support / 技术支持</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #0D1117;
+            color: #E6EDF3;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+        h2 {
+            font-size: 1.4em;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #21262D;
+        }
+        h3 {
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #E6EDF3;
+        }
+        p { margin-bottom: 16px; color: #C9D1D9; }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #C9D1D9;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .lang-switch a {
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .lang-switch a.active {
+            background: #7C3AED;
+            color: #FFFFFF;
+        }
+        .lang-switch a:not(.active) {
+            background: #21262D;
+            color: #8B949E;
+        }
+        .lang-switch a:hover:not(.active) {
+            background: #30363D;
+            color: #C9D1D9;
+        }
+        .section { display: none; }
+        .section.active { display: block; }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .logo-area .icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #7C3AED, #5B21B6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        a { color: #7C3AED; }
+        a:hover { color: #9F67FF; }
+        .subtitle {
+            color: #8B949E;
+            font-size: 0.95em;
+            margin-bottom: 32px;
+        }
+        .contact-card {
+            background: #161B22;
+            border: 1px solid #21262D;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .contact-card p { margin-bottom: 8px; }
+        .contact-card p:last-child { margin-bottom: 0; }
+        .faq-item {
+            background: #161B22;
+            border: 1px solid #21262D;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+        .faq-item h3 {
+            margin-top: 0;
+            color: #FFFFFF;
+        }
+        .faq-item p { margin-bottom: 0; }
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid #21262D;
+            color: #484F58;
+            font-size: 0.85em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-area">
+            <div class="icon">📋</div>
+            <h1>SnippetBox</h1>
+        </div>
+
+        <div class="lang-switch">
+            <a class="active" onclick="switchLang('zh')">中文</a>
+            <a onclick="switchLang('en')">English</a>
+        </div>
+
+        <!-- 中文版 -->
+        <div id="zh" class="section active">
+            <h1>技术支持</h1>
+            <p class="subtitle">我们随时为您提供帮助</p>
+
+            <h2>联系我们</h2>
+            <div class="contact-card">
+                <p>📧 邮箱：<a href="mailto:support@snippetbox.app">support@snippetbox.app</a></p>
+                <p>我们通常会在 24 小时内回复您的邮件。</p>
+            </div>
+
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>如何升级到 Pro 版本？</h3>
+                <p>打开 SnippetBox → 设置 → 点击"升级到 Pro"，即可通过 App 内购买完成一次性买断升级。Pro 版解锁无限代码片段、iCloud 同步和导入导出功能。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>如何恢复已购买的 Pro？</h3>
+                <p>打开 SnippetBox → 设置 → 点击"恢复购买"。请确保使用的是购买时的同一个 Apple ID。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>iCloud 同步不工作怎么办？</h3>
+                <p>请检查：① 设备已登录 iCloud 账户；② 系统设置 → iCloud → 确认 SnippetBox 的 iCloud 访问已开启；③ 设备有稳定的网络连接。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>免费版有什么限制？</h3>
+                <p>免费版可以保存最多 20 个代码片段。升级到 Pro 后可解锁无限片段、iCloud 同步和导入导出功能。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>我的数据安全吗？</h3>
+                <p>所有数据仅存储在您的设备本地和您个人的 iCloud 账户中。我们不收集、不存储、不传输任何用户数据。详情请阅读我们的<a href="privacy.html">隐私政策</a>。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>支持哪些编程语言的语法高亮？</h3>
+                <p>SnippetBox 支持 Swift、Python、JavaScript、TypeScript、Java、C/C++、Go、Rust、HTML/CSS、SQL、Shell 等多种主流编程语言的语法高亮。</p>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div id="en" class="section">
+            <h1>Support</h1>
+            <p class="subtitle">We're here to help</p>
+
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <p>📧 Email: <a href="mailto:support@snippetbox.app">support@snippetbox.app</a></p>
+                <p>We typically respond within 24 hours.</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>How do I upgrade to Pro?</h3>
+                <p>Open SnippetBox → Settings → Tap "Upgrade to Pro" to make a one-time purchase. Pro unlocks unlimited snippets, iCloud sync, and import/export features.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I restore my Pro purchase?</h3>
+                <p>Open SnippetBox → Settings → Tap "Restore Purchase". Make sure you're signed in with the same Apple ID used for the original purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>iCloud sync is not working?</h3>
+                <p>Please check: ① Your device is signed into iCloud; ② Settings → iCloud → Verify SnippetBox's iCloud access is enabled; ③ Your device has a stable internet connection.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What are the free version limitations?</h3>
+                <p>The free version allows up to 20 code snippets. Upgrading to Pro unlocks unlimited snippets, iCloud sync, and import/export features.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data safe?</h3>
+                <p>All data is stored only on your device and in your personal iCloud account. We do not collect, store, or transmit any user data. Read our <a href="privacy.html">Privacy Policy</a> for details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which programming languages are supported?</h3>
+                <p>SnippetBox supports syntax highlighting for Swift, Python, JavaScript, TypeScript, Java, C/C++, Go, Rust, HTML/CSS, SQL, Shell, and many more popular languages.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 SnippetBox. All Rights Reserved.</p>
+            <p style="margin-top: 8px;"><a href="privacy.html">Privacy Policy / 隐私政策</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.querySelectorAll('.lang-switch a').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
